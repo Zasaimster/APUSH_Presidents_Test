@@ -2,7 +2,10 @@
 	float: left;
 	width: 15.33%
 }
-
+.num{
+	float:left;
+	width:5%
+}
 .row:after {
 	content: "";
 	display: table;
