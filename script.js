@@ -143,6 +143,57 @@ year = [
 
 ];
 
+yearsshort = [
+	"89-97",
+        "97-01",
+        "01-09",
+        "09-17",
+        "17-25",
+	"25-29",
+        "29-37",
+        "37-41",
+        "41-41",
+        "41-45",
+	"45-49",
+        "49-50",
+        "50-53",
+        "53-57",
+        "57-61",
+	"61-65",
+        "65-69",
+        "69-77",
+        "77-81",
+        "81-81",
+	"81-85",
+	"85-89",
+	"89-93",
+	"93-97",
+	"97-01",
+	"01-09",
+	"09-13",
+        "13-21",
+        "21-23",
+        "23-29",
+	"29-33",
+        "33-45",
+        "45-53",
+        "53-61",
+        "61-63",
+        "63-69",
+        "69-74",
+        "74-77",
+	"77-81",
+	"81-89",
+	"89-93",	
+	"93-01",
+	"01-09",
+	"09-17",
+	"17-"
+
+];
+
+
+
 nameBoxes = [];
 yearBoxes = [];
 partyBoxes = [];
@@ -150,13 +201,9 @@ allBoxes = [];
 
 for(var i = 0; i < names.length; i++){
 	t = document.createElement('input');
-
-	t.setAttribute('readOnly','true');
 	t.value = i+1;
 	document.getElementById('numbers').appendChild(t);
 	document.getElementById('numbers').appendChild(document.createElement('br'));
-	t.style['width']='30px'
-
 
 	nameBoxes.push(document.createElement('input'));
 	nameBoxes[i].type = 'text';
@@ -214,7 +261,7 @@ function update(){
 		if(partyBoxes[i].value.toLowerCase() == party[i]) partyBoxes[i].style.backgroundColor = "rgb(0, 255, 0)";
 		else if(partyBoxes[i].value != "") partyBoxes[i].style.backgroundColor = "red";
 
-		if(yearBoxes[i].value == year[i]) yearBoxes[i].style.backgroundColor = "rgb(0, 255, 0)";
+		if(yearBoxes[i].value == year[i]||yearBoxes[i].value == yearsshort[i]) yearBoxes[i].style.backgroundColor = "rgb(0, 255, 0)";
                 else if(yearBoxes[i].value != "") yearBoxes[i].style.backgroundColor = "red";
 
 	}	
