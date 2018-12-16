@@ -201,9 +201,11 @@ allBoxes = [];
 
 for(var i = 0; i < names.length; i++){
 	t = document.createElement('input');
-	t.setAttribute('readOnly','true');
+
 	t.value = i+1;
-	t.style['width']='30px';
+	t.setAttribute('readOnly', 'true');
+	t.style['width'] ='30px';
+
 	document.getElementById('numbers').appendChild(t);
 	document.getElementById('numbers').appendChild(document.createElement('br'));
 
